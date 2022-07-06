@@ -2,7 +2,8 @@
 
 /**
  * print_alphabet_x10 - print alphabet 10 times
- * return: void
+ *
+ * Return: void
  */
 
 void print_alphabet_x10(void)
@@ -13,13 +14,13 @@ void print_alphabet_x10(void)
 	while (round < 10)
 	{
 		letter = 'a';
-	while (letter <= 'z)
+		while (letter <= 'z')
 		{
 			_putchar(letter);
 			letter++;
-
 		}
 		_putchar('\n');
+
 		round++;
 	}
 }

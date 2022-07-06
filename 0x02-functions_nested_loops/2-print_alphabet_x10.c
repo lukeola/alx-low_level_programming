@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet_x10 - print alphabet 10 times
- * eturn: void
+ * return: void
  */
 
 void print_alphabet_x10(void)
@@ -19,7 +19,7 @@ void print_alphabet_x10(void)
 			letter++;
 
 		}
-		_putchar('\n')
+		_putchar('\n');
 		round++;
 	}
 }

@@ -1,19 +1,24 @@
+# -*- Make File -*-
+
 CC = gcc
-SRC = main.c holberton.c
-OBJ = $(SRC:.c=.o)
-NAME = holberton
-RM = rm -f
+SRC = main.c school.c
+OBJ = $(patsubst %.c,%.o,$(SRC))
+NAME = school
+RM = rm
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all : $(OBJ)
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-clean :
-	$(RM) *~ $(NAME)
+clean:
+	$(RM) -f *~ $(NAME)
 
-oclean :
-	$(RM) $(OBJ)
+oclean:
+	$(RM) -f $(OBJ)
 
-fclean : clean oclean
+fclean: clean oclean
 
-re : oclean all
+re: oclean all
